@@ -539,6 +539,8 @@
       
         
       
+        
+      
     
     
     
@@ -810,6 +812,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/bridge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Native Bridge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -825,6 +855,10 @@
   
     
     
+      
+        
+      
+        
       
         
       
@@ -966,14 +1000,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/desktop-preview/" class="md-nav__link">
+      <a href="../../guides/dev-workflow/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Desktop Preview
+    Development Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/browser-preview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Browser Preview
   
 
     
@@ -1218,6 +1280,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../guides/pypi-packages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PyPI Packages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../guides/custom-native-components/" class="md-nav__link">
         
   
@@ -1253,7 +1343,7 @@
   <span class="md-ellipsis">
     
   
-    Hot Reload
+    Fast Refresh
   
 
     
@@ -1827,6 +1917,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1890,6 +1988,34 @@
     
   
     Package
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../component/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Component
   
 
     
@@ -2448,14 +2574,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../screen/" class="md-nav__link">
+      <a href="../hosts/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Screen
+    Hosts
   
 
     
@@ -2588,6 +2714,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../native_modules/" class="md-nav__link">
         
   
@@ -2624,6 +2778,34 @@
     
   
     Native views
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bridge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bridge
   
 
     
@@ -2736,6 +2918,34 @@
     
   
     SDK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devserver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dev server
   
 
     
@@ -3311,24 +3521,19 @@ don't block the framework loop.</p>
 
         <p>Cross-platform key/value persistence (<code>AsyncStorage</code>).</p>
 <p>Mirrors React Native's <code>AsyncStorage</code> API but with native <code>async</code>
-coroutines and a JSON convenience layer. Values are persisted using
-the platform-appropriate key/value store:</p>
+coroutines and a JSON convenience layer. Values are persisted by the
+native <code>Storage</code> module:</p>
 <ul>
 <li><strong>iOS</strong>: <code>NSUserDefaults</code> (standard user defaults).</li>
 <li><strong>Android</strong>: <code>SharedPreferences</code> (file <code>"pn_async_storage"</code>).</li>
-<li><strong>Desktop / tests</strong>: an in-memory dict optionally backed by a JSON
-  file under
-  <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-method&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;app_dir&lt;/span&gt;
-
-
-  &lt;span class=&quot;doc doc-labels&quot;&gt;
-      &lt;small class=&quot;doc doc-label doc-label-staticmethod&quot;&gt;&lt;code&gt;staticmethod&lt;/code&gt;&lt;/small&gt;
-  &lt;/span&gt;" href="../native_modules/#pythonnative.native_modules.file_system.FileSystem.app_dir"><code>FileSystem.app_dir</code></a>
-  for inter-run persistence during local development.</li>
+<li><strong>Browser preview / tests</strong>: an in-memory dict optionally backed by a JSON
+  file under <code>PN_STORAGE_DIR</code> for inter-run persistence during local
+  development (see
+  <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;FallbackStorage&lt;/span&gt;" href="../native_modules/#pythonnative.native_modules.fallback.FallbackStorage"><code>FallbackStorage</code></a>).</li>
 </ul>
-<p>All operations are coroutines so they don't block the framework loop;
-the underlying native calls are dispatched via
-:func:<code>asyncio.to_thread</code>.</p>
+<p>Every operation is a coroutine. The platform stores answer in
+microseconds, so calls complete inline on the framework loop without
+a thread hop.</p>
 
 
 <details class="example" open>
@@ -3801,7 +4006,9 @@ process or an older version of the app.</p>
 
 
 <a href="#pythonnative.storage.use_persisted_state" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">use_persisted_state</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">,</span> <span class="n">initial</span><span class="p">:</span> <span class="n"><span title="pythonnative.storage.T">T</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-external" title="&lt;code&gt;typing.Tuple&lt;/code&gt;" href="https://docs.python.org/3/library/typing.html#typing.Tuple">Tuple</a></span><span class="p">[</span><span class="n"><span title="pythonnative.storage.T">T</span></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-external" title="&lt;code&gt;typing.Callable&lt;/code&gt;" href="https://docs.python.org/3/library/typing.html#typing.Callable">Callable</a></span><span class="p">[[</span><span class="n"><a class="autorefs autorefs-external" title="&lt;code&gt;typing.Any&lt;/code&gt;" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></span><span class="p">],</span> <span class="kc">None</span><span class="p">]]</span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">use_persisted_state</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">key</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">,</span> <span class="n">initial</span><span class="p">:</span> <span class="n"><span title="pythonnative.storage.T">T</span></span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-external" title="&lt;code&gt;typing.Tuple&lt;/code&gt;" href="https://docs.python.org/3/library/typing.html#typing.Tuple">Tuple</a></span><span class="p">[</span><span class="n"><span title="pythonnative.storage.T">T</span></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-external" title="&lt;code&gt;typing.Callable&lt;/code&gt;" href="https://docs.python.org/3/library/typing.html#typing.Callable">Callable</a></span><span class="p">[[</span><span class="n"><a class="autorefs autorefs-external" title="&lt;code&gt;typing.Any&lt;/code&gt;" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></span><span class="p">],</span> <span class="kc">None</span><span class="p">]]</span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">

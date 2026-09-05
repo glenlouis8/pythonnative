@@ -650,6 +650,8 @@
       
         
       
+        
+      
     
     
     
@@ -921,6 +923,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="concepts/bridge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Native Bridge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -936,6 +966,10 @@
   
     
     
+      
+        
+      
+        
       
         
       
@@ -1077,14 +1111,42 @@
   
   
     <li class="md-nav__item">
-      <a href="guides/desktop-preview/" class="md-nav__link">
+      <a href="guides/dev-workflow/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Desktop Preview
+    Development Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guides/browser-preview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Browser Preview
   
 
     
@@ -1329,6 +1391,34 @@
   
   
     <li class="md-nav__item">
+      <a href="guides/pypi-packages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PyPI Packages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="guides/custom-native-components/" class="md-nav__link">
         
   
@@ -1364,7 +1454,7 @@
   <span class="md-ellipsis">
     
   
-    Hot Reload
+    Fast Refresh
   
 
     
@@ -1936,6 +2026,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1998,6 +2096,34 @@
     
   
     Package
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/component/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Component
   
 
     
@@ -2382,14 +2508,14 @@
   
   
     <li class="md-nav__item">
-      <a href="api/screen/" class="md-nav__link">
+      <a href="api/hosts/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Screen
+    Hosts
   
 
     
@@ -2522,6 +2648,34 @@
   
   
     <li class="md-nav__item">
+      <a href="api/testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="api/native_modules/" class="md-nav__link">
         
   
@@ -2558,6 +2712,34 @@
     
   
     Native views
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/bridge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bridge
   
 
     
@@ -2670,6 +2852,34 @@
     
   
     SDK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/devserver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dev server
   
 
     
@@ -3171,11 +3381,9 @@
 <h1 id="pythonnative">PythonNative<a class="headerlink" href="#pythonnative" title="Permanent link">&para;</a></h1>
 <p>PythonNative is a cross-platform toolkit for building native <strong>Android</strong>
 and <strong>iOS</strong> apps in plain Python. The component model is React-style
-(function components plus hooks plus a reconciler); the runtime calls
-into the platform's real widget libraries directly via
-<a href="https://chaquo.com/chaquopy/">Chaquopy</a> on Android and
-<a href="https://rubicon-objc.readthedocs.io/">rubicon-objc</a> on iOS. There is
-no JavaScript bridge.</p>
+(function components plus hooks plus a reconciler); rendering and
+device APIs are native Swift and Kotlin, driven over a small bridge
+with one transaction per commit. There is no JavaScript anywhere.</p>
 <h2 id="a-taste">A taste<a class="headerlink" href="#a-taste" title="Permanent link">&para;</a></h2>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pythonnative</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pn</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
@@ -3219,17 +3427,20 @@ produce identical frames on both platforms.</p>
   Component fragments on Android, <code>UINavigationController</code> on iOS),
   so transitions, back gestures, and state preservation are exactly
   what users expect from a first-class native app.</li>
-<li><strong>Fast Refresh hot reload.</strong> <code>pn run --hot-reload</code> watches <code>app/</code>
-  and patches the running app in place, preserving component state
-  across most edits.</li>
+<li><strong>A Metro-style dev loop.</strong> <code>pn start</code> runs one dev server for the
+  browser preview and every connected debug build. Save a file and
+  each client Fast Refreshes in place, preserving component state;
+  their logs stream back into the same terminal. See the
+  <a href="guides/dev-workflow/">Development workflow</a>.</li>
 <li><strong>Dev-mode diagnostics.</strong> Uncaught errors show a full-screen RedBox
   with the traceback instead of crashing; typos in style keys and
   duplicate list keys print "did you mean" warnings; conditional
   hooks raise at the source. Every check is skipped in production.</li>
-<li><strong>Instant desktop preview.</strong> <code>pn preview</code> renders your app in a
-  desktop window with Fast Refresh, so you can iterate on UI, state,
-  and navigation in milliseconds (no simulator boot required). See the
-  <a href="guides/desktop-preview/">Desktop preview guide</a>.</li>
+<li><strong>Browser preview.</strong> <code>pn preview</code> renders your app in a browser tab
+  inside a phone frame, through the same bridge protocol the Swift and
+  Kotlin runtimes speak, so you can iterate on UI, state, and
+  navigation in milliseconds (no simulator boot required). See the
+  <a href="guides/browser-preview/">Browser preview guide</a>.</li>
 <li><strong>An extension SDK.</strong> <a href="api/sdk/"><code>pythonnative.sdk</code></a> lets you
   wrap any platform widget as a first-class element with
   type-checked props, and PyPI plugins auto-register through the
@@ -3241,7 +3452,7 @@ produce identical frames on both platforms.</p>
 <ul>
 <li>New here? Start with <a href="getting-started/">Getting started</a>.</li>
 <li>Want to see it run right now? Try the
-  <a href="guides/desktop-preview/">Desktop preview</a>.</li>
+  <a href="guides/browser-preview/">Browser preview</a>.</li>
 <li>Want the bigger picture? Read <a href="concepts/mental-model/">Mental model</a>.</li>
 <li>Looking up an API? <a href="api/pythonnative/">Package overview</a>.</li>
 <li>Wrapping a custom widget? Read

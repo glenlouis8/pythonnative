@@ -539,6 +539,8 @@
       
         
       
+        
+      
     
     
     
@@ -810,6 +812,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/bridge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Native Bridge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -825,6 +855,10 @@
   
     
     
+      
+        
+      
+        
       
         
       
@@ -966,14 +1000,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../desktop-preview/" class="md-nav__link">
+      <a href="../dev-workflow/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Desktop Preview
+    Development Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../browser-preview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Browser Preview
   
 
     
@@ -1218,6 +1280,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../pypi-packages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PyPI Packages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../custom-native-components/" class="md-nav__link">
         
   
@@ -1253,7 +1343,7 @@
   <span class="md-ellipsis">
     
   
-    Hot Reload
+    Fast Refresh
   
 
     
@@ -2008,6 +2098,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2070,6 +2168,34 @@
     
   
     Package
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/component/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Component
   
 
     
@@ -2454,14 +2580,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/screen/" class="md-nav__link">
+      <a href="../../api/hosts/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Screen
+    Hosts
   
 
     
@@ -2594,6 +2720,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api/testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api/native_modules/" class="md-nav__link">
         
   
@@ -2630,6 +2784,34 @@
     
   
     Native views
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/bridge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bridge
   
 
     
@@ -2742,6 +2924,34 @@
     
   
     SDK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/devserver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dev server
   
 
     
@@ -3388,7 +3598,9 @@ package to <code>.pyc</code> and drop the <code>.py</code> files, which shrinks 
 and avoids shipping plain-text source. Because bytecode is
 version-specific, this requires the Python running <code>pn</code> to match
 <code>app.python_version</code>; otherwise <code>pn</code> prints a notice and ships <code>.py</code>
-sources instead.</p>
+sources instead. Debug builds (<code>pn run</code>, <code>pn build --debug</code>) keep the
+<code>.py</code> files on both platforms so tracebacks show source lines and the
+dev client can tell which sources the app already has.</p>
 <h3 id="signing_1">Signing<a class="headerlink" href="#signing_1" title="Permanent link">&para;</a></h3>
 <p>Set your Apple Developer Team ID and an export method:</p>
 <div class="language-toml highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">[ios]</span>
@@ -3409,10 +3621,13 @@ project. On the first iOS build, <code>pn</code> downloads the pinned, checksum-
 verified runtime for your <code>app.python_version</code> and caches it under
 <code>build/ios/ios_runtime/</code>. The Xcode build links <code>Python.xcframework</code>,
 installs the standard library, and bundles your <code>app/</code> sources, the
-<code>pythonnative</code> package, and any pure-Python <code>[requirements].packages</code>.</p>
-<p>Pinned, verified runtimes exist for <strong>Python 3.10, 3.11, and 3.12</strong>;
-set <code>python_version</code> in <code>[app]</code> accordingly. Unpinned versions are
-rejected rather than fetched unverified.</p>
+<code>pythonnative</code> package, and the <code>[requirements].packages</code> resolved for
+the SDK being built (device or Simulator), binary wheels included.</p>
+<p>Pinned, verified runtimes exist for <strong>Python 3.13 and 3.14</strong>; set
+<code>python_version</code> in <code>[app]</code> accordingly. Unpinned versions are
+rejected rather than fetched unverified. See
+<a href="../pypi-packages/">PyPI packages</a> for how requirements are resolved
+per target.</p>
 <hr />
 <h2 id="app-icon-and-splash">App icon and splash<a class="headerlink" href="#app-icon-and-splash" title="Permanent link">&para;</a></h2>
 <p>Provide a single high-resolution source image and PythonNative renders

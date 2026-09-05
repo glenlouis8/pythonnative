@@ -541,6 +541,8 @@
       
         
       
+        
+      
     
     
     
@@ -926,6 +928,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bridge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Native Bridge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -941,6 +971,10 @@
   
     
     
+      
+        
+      
+        
       
         
       
@@ -1082,14 +1116,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/desktop-preview/" class="md-nav__link">
+      <a href="../../guides/dev-workflow/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Desktop Preview
+    Development Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/browser-preview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Browser Preview
   
 
     
@@ -1334,6 +1396,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../guides/pypi-packages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PyPI Packages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../guides/custom-native-components/" class="md-nav__link">
         
   
@@ -1369,7 +1459,7 @@
   <span class="md-ellipsis">
     
   
-    Hot Reload
+    Fast Refresh
   
 
     
@@ -1941,6 +2031,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2003,6 +2101,34 @@
     
   
     Package
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/component/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Component
   
 
     
@@ -2387,14 +2513,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/screen/" class="md-nav__link">
+      <a href="../../api/hosts/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Screen
+    Hosts
   
 
     
@@ -2527,6 +2653,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api/testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api/native_modules/" class="md-nav__link">
         
   
@@ -2563,6 +2717,34 @@
     
   
     Native views
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/bridge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bridge
   
 
     
@@ -2675,6 +2857,34 @@
     
   
     SDK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/devserver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dev server
   
 
     
@@ -3182,16 +3392,17 @@ runtime, however, is meaningfully different.</p>
 <ul>
 <li><code>@pn.component</code> functions return immutable
   <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;Element&lt;/span&gt;" href="../../api/element/#pythonnative.element.Element"><code>Element</code></a> descriptors. Nothing is mounted
-  until the <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;Reconciler&lt;/span&gt;" href="../../api/reconciler/#pythonnative.reconciler.Reconciler"><code>Reconciler</code></a> commits
+  until the <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;Reconciler&lt;/span&gt;" href="../../api/reconciler/#pythonnative.reconciler.core.Reconciler"><code>Reconciler</code></a> commits
   the tree.</li>
 <li>Hooks (<a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;use_state&lt;/span&gt;" href="../../api/hooks/#pythonnative.hooks.use_state"><code>use_state</code></a>,
   <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;use_effect&lt;/span&gt;" href="../../api/hooks/#pythonnative.hooks.use_effect"><code>use_effect</code></a>, etc.) drive re-renders.
   State updates are batched per render pass.</li>
 <li>Re-rendering produces a new tree; the reconciler diffs it against
   the previous one and applies the smallest set of native mutations.</li>
-<li>Native widgets are created and updated by direct platform calls
-  (Chaquopy on Android, rubicon-objc on iOS). There is no JavaScript
-  bridge and no V8 / Hermes runtime.</li>
+<li>Native widgets are created and updated by Swift and Kotlin
+  component managers that receive one serialized transaction per
+  commit over the <a href="../bridge/">native bridge</a>. There is no JavaScript
+  and no V8 / Hermes runtime.</li>
 </ul>
 <h2 id="the-runtime-in-one-diagram">The runtime in one diagram<a class="headerlink" href="#the-runtime-in-one-diagram" title="Permanent link">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>@pn.component fn   ---&gt;   Element tree   ---&gt;   Reconciler   ---&gt;   Native views
@@ -3233,8 +3444,8 @@ that prevents render storms).</p>
 </tr>
 <tr>
 <td>Bridge</td>
-<td>Async JS bridge (or JSI in newer versions)</td>
-<td>None; direct platform calls</td>
+<td>Fabric: one C++ shadow tree commit per render; TurboModules for device APIs</td>
+<td>One JSON transaction per commit applied by Swift / Kotlin component managers; named native modules for device APIs</td>
 </tr>
 <tr>
 <td>Threading</td>
@@ -3244,17 +3455,22 @@ that prevents render storms).</p>
 <tr>
 <td>Distribution</td>
 <td>Metro bundler ships a JS bundle</td>
-<td>The <code>pn</code> CLI bundles your <code>app/</code> and the <code>pythonnative</code> package into the native project</td>
+<td><code>pn build</code> bundles your <code>app/</code> and the <code>pythonnative</code> package into the native project</td>
 </tr>
 <tr>
-<td>Hot reload</td>
-<td>Metro fast refresh of the JS bundle</td>
-<td><code>FileWatcher</code> plus <code>ModuleReloader</code> reloads <code>.py</code> modules in place</td>
+<td>Dev loop</td>
+<td>Metro dev server; Expo Go / dev client on device; Fast Refresh</td>
+<td><code>pn start</code> dev server; debug builds and the <code>--dev-client</code> shell connect over WebSocket; Fast Refresh reloads <code>.py</code> modules in place</td>
+</tr>
+<tr>
+<td>Preview without a device</td>
+<td>Expo web / Snack</td>
+<td><code>pn preview</code> renders in a browser tab through the same bridge protocol the native runtimes speak</td>
 </tr>
 <tr>
 <td>Native widgets</td>
-<td>Wrapped via React Native's bridge</td>
-<td>Wrapped via <code>ViewHandler</code> classes calling Chaquopy / rubicon-objc directly</td>
+<td>Wrapped by Fabric component managers</td>
+<td>Wrapped by <code>PNComponentManager</code> (Swift) / <code>ComponentManager</code> (Kotlin) classes</td>
 </tr>
 </tbody>
 </table>
