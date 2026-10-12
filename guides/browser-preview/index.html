@@ -892,6 +892,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1278,6 +1286,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../state/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Managing State
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assets, Fonts, Icons & SVG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../animations/" class="md-nav__link">
         
   
@@ -1446,6 +1510,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../native-contracts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Generated Native Contracts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../pypi-packages/" class="md-nav__link">
         
   
@@ -1566,6 +1658,34 @@
     
   
     Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linting
   
 
     
@@ -2089,6 +2209,18 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2235,6 +2367,34 @@
     
   
     Hooks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/handles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Handles
   
 
     
@@ -2431,6 +2591,62 @@
     
   
     Images
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/assets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/graphics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Graphics
   
 
     
@@ -2675,6 +2891,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api/theme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Theme
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/store/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Store
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api/navigation/" class="md-nav__link">
         
   
@@ -2711,6 +2983,34 @@
     
   
     Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/lint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lint
   
 
     
@@ -3490,20 +3790,21 @@ PythonNative: edit a component, save, and see the result in well under a
 second, with no simulator boot, no device deploy, and no native build.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pn<span class="w"> </span>preview
 </span></code></pre></div>
-<p>The preview isn't a second rendering backend. The page is treated as a
-<strong>native runtime</strong>: it receives the same JSON transactions the Swift and
-Kotlin runtimes apply, answers the same <code>measure</code> / <code>command</code> /
-<code>animate</code> requests, and raises the same events. Your Python runs in the
-<code>pn preview</code> process with the on-device reconciler, screen host, hooks,
-navigation, async runtime, and flex layout engine unchanged. Only the
-leaf widgets differ: DOM elements instead of UIKit and Android views.</p>
+<p>The browser renderer speaks the same bridge protocol as the Swift and
+Kotlin renderers. Your components, hooks, reconciliation, logical navigation,
+and async work run in the <code>pn preview</code> Python process. The page implements
+widgets with DOM elements, layout with Yoga WebAssembly, and animation
+graphs with JavaScript. Platform controls, fonts, and device APIs differ
+from those in a mobile app.</p>
 <h2 id="quick-start">Quick start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
 <p>From a project directory (one created by <code>pn init</code>, with an
 <code>app/main.py</code> that defines <code>App</code>):</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pn<span class="w"> </span>preview
 </span></code></pre></div>
 <p>This starts the <a href="../dev-workflow/">dev server</a>, opens
-<code>http://localhost:8765/</code> in your default browser, mounts your <code>App</code> in
+<code>http://localhost:8765/?token=...</code> in your default browser (the page
+trades your <a href="../dev-workflow/#the-dev-token">dev token</a> for a cookie and
+drops it from the address bar), mounts your <code>App</code> in
 a phone frame, and watches <code>app/</code> for changes. Edit any component and
 save: the page updates in place while preserving component state
 (counters, text input, scroll position, the navigation stack).</p>
@@ -3556,12 +3857,12 @@ mounted fresh on reconnect.</p>
    the page and for dev clients.</li>
 <li>Installs a <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;WebTransport&lt;/span&gt;" href="../../api/devserver/#pythonnative.bridge.web.WebTransport"><code>WebTransport</code></a> as
    the bridge transport. Transactions the reconciler commits become
-   <code>["apply", ops]</code> messages to the page; the page's events come back
-   as <code>["cb", ...]</code> callbacks; synchronous questions (<code>measure</code> above
-   all) block the main thread until the page answers.</li>
-<li>Runs the transport's main loop on the main thread. That loop is the
-   browser's stand-in for the UIKit / Android main queue: every
-   callback and every <code>asyncio</code> pump runs there.</li>
+   <code>["apply", request_id, commit]</code> messages to the page; the page's events come back
+   as <code>["cb", ...]</code> callbacks. Commits acknowledge exact revisions, and native
+   Yoga WebAssembly layout returns a batch of changed frames.</li>
+<li>Runs Python callbacks and tasks on the standard application asyncio loop.
+   The page owns DOM widgets and Yoga WebAssembly layout. Network I/O and Python
+   work execute independently of the browser's UI thread.</li>
 <li>When the page connects, tells it the entry module. The page asks
    the <code>Host</code> module to create a screen, exactly as
    <code>PNViewController</code> and <code>PNScreenFragment</code> do, and a
@@ -3577,12 +3878,22 @@ for every element, and the page positions each element with that frame.
 Text is measured by the page with the same font it renders, so wrapping
 and intrinsic sizes match what you see.</p>
 <h3 id="navigation">Navigation<a class="headerlink" href="#navigation" title="Permanent link">&para;</a></h3>
-<p>Root navigators (<code>create_stack_navigator</code>, tabs, drawer) drive a real
-stack of screens in the page, the same way they drive
-<code>UINavigationController</code> / AndroidX Navigation on device. Each pushed
-screen gets its own host and reconciler; <code>navigate(...)</code> pushes,
-<code>go_back()</code> pops, and the previous screen's state survives underneath.
-Pushes and pops animate with a slide.</p>
+<p>Root navigators (<code>StackNavigator</code>, <code>TabNavigator</code>, and
+<code>DrawerNavigator</code>) drive a real stack of screens in the page, the same
+way they drive <code>UINavigationController</code> and fragments on device. Each pushed
+screen remains a logical child of the application's shared tree;
+<code>navigate(...)</code> selects or adds a route, <code>go_back()</code> pops, and covered
+screens keep their state.
+Pushes and pops animate with the screen's <code>animation</code> and
+<code>presentation</code> options.</p>
+<p>Each stack draws a navigation bar from the top screen's options, the way
+the native stacks do: <code>title</code>, <code>header_shown</code>, <code>header_large_title</code>,
+<code>header_back_visible</code>, <code>header_back_title</code>, <code>header_tint_color</code>,
+<code>header_style</code>, and <code>header_title_style</code>, with <code>header_left</code> and
+<code>header_right</code> rendered in the bar. The back button pops through the same
+path as an iOS swipe back, so a <code>before_remove</code> listener can veto it. A
+stack at the root of the app replaces the host's own bar, as it does on
+iOS.</p>
 <h3 id="dev-mode-and-errors">Dev mode and errors<a class="headerlink" href="#dev-mode-and-errors" title="Permanent link">&para;</a></h3>
 <p>The preview always runs with dev diagnostics on: unknown style keys and
 duplicate list keys print <code>[PN] WARN</code> messages, hook-order violations
@@ -3617,7 +3928,7 @@ browser is a development surface, so use an explicit <code>"web"</code> key (or
 and logic rather than pixel-perfect platform chrome.</p>
 <p>Faithful:</p>
 <ul>
-<li>Flex layout, sizing, padding, spacing, absolute positioning, and
+<li>Flex layout, sizing, padding, gap, absolute positioning, and
   safe areas for the chosen device frame.</li>
 <li>Component lifecycle, hooks, effects, context, error boundaries,
   Suspense.</li>
@@ -3630,9 +3941,10 @@ and logic rather than pixel-perfect platform chrome.</p>
   borders, opacity, shadows, and overflow clipping.</li>
 <li><code>Animated</code> timing, spring, and decay, run through the same
   <code>animate</code> protocol the native animators implement; transforms,
-  opacity, and colors animate on the compositor.</li>
+  opacity, and colors update through the page's animation graph.</li>
 <li>Gestures: the page streams raw pointer events to the Python
-  <a href="../gestures/">gesture arbiter</a>, the same one Android uses.</li>
+  <a href="../gestures/">gesture arbiter</a>. Mobile renderers recognize gestures
+  in Swift and Kotlin.</li>
 <li>Scrolling, <code>FlatList</code> / <code>SectionList</code> windowing, pull to refresh,
   and scroll-driven <code>Animated.event</code> bindings.</li>
 </ul>
@@ -3659,11 +3971,14 @@ and logic rather than pixel-perfect platform chrome.</p>
 </ul>
 <p>When the chrome matters, verify on device with <code>pn run</code>.</p>
 <h2 id="sharing-the-preview">Sharing the preview<a class="headerlink" href="#sharing-the-preview" title="Permanent link">&para;</a></h2>
-<p>The server binds to all interfaces by default, so someone on the same
-network can open <code>http://&lt;your-ip&gt;:8765/</code> and see the app. One page
-drives the app at a time: the newest tab to connect takes over, and the
-previous one shows a notice until you reload it. Use
-<code>--host 127.0.0.1</code> to keep the preview local.</p>
+<p>The server binds to all interfaces by default so your own phones can
+reach it, but it only answers clients that present your
+<a href="../dev-workflow/#the-dev-token">dev token</a>. The LAN URLs <code>pn start</code>
+prints carry the token, and anyone who has one can read your app's
+source for as long as the token stays the same, so open them only on
+your own devices. One page drives the app at a time: the newest tab to
+connect takes over, and the previous one shows a notice until you reload
+it. Use <code>--host 127.0.0.1</code> to keep the preview local.</p>
 <h2 id="next-steps">Next steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
 <ul>
 <li>The whole loop, including simulators and devices:

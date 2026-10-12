@@ -890,6 +890,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1112,6 +1120,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../../guides/state/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Managing State
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/assets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assets, Fonts, Icons & SVG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../guides/animations/" class="md-nav__link">
         
   
@@ -1280,6 +1344,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../guides/native-contracts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Generated Native Contracts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../guides/pypi-packages/" class="md-nav__link">
         
   
@@ -1400,6 +1492,34 @@
     
   
     Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/linting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linting
   
 
     
@@ -1923,6 +2043,18 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2069,6 +2201,34 @@
     
   
     Hooks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/handles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Handles
   
 
     
@@ -2265,6 +2425,62 @@
     
   
     Images
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/assets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/graphics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Graphics
   
 
     
@@ -2509,6 +2725,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api/theme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Theme
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/store/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Store
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api/navigation/" class="md-nav__link">
         
   
@@ -2545,6 +2817,34 @@
     
   
     Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/lint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lint
   
 
     
@@ -3610,24 +3910,38 @@ and their fixes, see <a href="../troubleshooting/">Troubleshooting</a>.</p>
 <p>PythonNative renders <strong>real</strong> native widgets through Swift and Kotlin
 component managers. A <code>pn.Text</code> becomes a <code>UILabel</code> /
 <code>TextView</code>; a <code>pn.Button</code> becomes a <code>UIButton</code> / <code>Button</code>.
-Accessibility, theming, and platform behaviors come along for free.</p>
+Platform controls provide native behavior. Applications still need appropriate
+accessibility labels, roles, and testing on each deployment target.</p>
 <p>The component model is React-style (functions plus hooks plus a
 reconciler) so you get a familiar declarative API on top of those
-native widgets, instead of an imperative widget toolkit. There is no
-JavaScript bridge: native APIs are direct method calls from Python.</p>
+native widgets. Python runs on its own application thread and communicates
+with the native UI through a versioned bridge.</p>
 <h2 id="can-i-write-android-only-or-ios-only-code">Can I write Android-only or iOS-only code?<a class="headerlink" href="#can-i-write-android-only-or-ios-only-code" title="Permanent link">&para;</a></h2>
 <p>Yes. Two patterns:</p>
 <ul>
 <li>
-<p><strong>Branch on <code>IS_ANDROID</code> / <code>IS_IOS</code></strong> for small differences inside
-  a shared component:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pythonnative.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">IS_ANDROID</span><span class="p">,</span> <span class="n">IS_IOS</span>
+<p><strong>Branch on <code>IS_ANDROID</code> / <code>IS_IOS</code> / <code>IS_WEB</code></strong> for small
+  differences inside a shared component:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pythonnative.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">IS_ANDROID</span><span class="p">,</span> <span class="n">IS_IOS</span><span class="p">,</span> <span class="n">IS_WEB</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">if</span> <span class="n">IS_ANDROID</span><span class="p">:</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="o">...</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">elif</span> <span class="n">IS_IOS</span><span class="p">:</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="o">...</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">elif</span> <span class="n">IS_WEB</span><span class="p">:</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="o">...</span>
 </span></code></pre></div>
+<p><code>pn preview</code> and <code>pn start</code> set <code>PN_PLATFORM=web</code>, so <code>IS_WEB</code> is
+<code>True</code> in the browser preview; see the
+<a href="../../guides/browser-preview/">Browser preview guide</a>.
+For a declarative alternative, use
+<a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-method&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;select&lt;/span&gt;
+
+
+  &lt;span class=&quot;doc doc-labels&quot;&gt;
+      &lt;small class=&quot;doc doc-label doc-label-staticmethod&quot;&gt;&lt;code&gt;staticmethod&lt;/code&gt;&lt;/small&gt;
+  &lt;/span&gt;" href="../../api/platform/#pythonnative.platform.Platform.select"><code>Platform.select</code></a> with the
+<code>"web"</code> key.</p>
 </li>
 <li>
 <p><strong>Per-platform native modules</strong> for larger pieces (a custom widget,
@@ -3636,27 +3950,33 @@ JavaScript bridge: native APIs are direct method calls from Python.</p>
 </li>
 </ul>
 <h2 id="how-do-i-add-a-new-widget">How do I add a new widget?<a class="headerlink" href="#how-do-i-add-a-new-widget" title="Permanent link">&para;</a></h2>
-<p>Implement a <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;ViewHandler&lt;/span&gt;" href="../../api/native_views/#pythonnative.native_views.base.ViewHandler"><code>ViewHandler</code></a>
-for each platform you support, register it on
-<a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;get_registry&lt;/span&gt;" href="../../api/native_views/#pythonnative.native_views.get_registry"><code>get_registry()</code></a>, and write
-a small Python factory that returns
-<code>Element(&lt;type&gt;, props, children)</code>. Step-by-step instructions live in
-<a href="../../concepts/native-views/#custom-widgets">Native views (concept)</a>.</p>
+<p>Declare a frozen <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;Props&lt;/span&gt;
+
+
+  &lt;span class=&quot;doc doc-labels&quot;&gt;
+      &lt;small class=&quot;doc doc-label doc-label-dataclass&quot;&gt;&lt;code&gt;dataclass&lt;/code&gt;&lt;/small&gt;
+  &lt;/span&gt;" href="../../api/sdk/#pythonnative.sdk.Props"><code>Props</code></a> dataclass, call
+<a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;define_component&lt;/span&gt;" href="../../api/sdk/#pythonnative.sdk.define_component"><code>define_component(name, props)</code></a>
+to get a typed element factory, generate the native contract, and
+implement a Swift <code>PNComponentManager</code> and a Kotlin <code>ComponentManager</code>
+under the same name. Headless tests and the browser preview need no
+extra Python code. Step-by-step instructions live in
+<a href="../../guides/custom-native-components/">Custom native components</a>.</p>
 <h2 id="does-pythonnative-work-on-the-desktop-or-the-web">Does PythonNative work on the desktop or the web?<a class="headerlink" href="#does-pythonnative-work-on-the-desktop-or-the-web" title="Permanent link">&para;</a></h2>
 <p>For <strong>previewing</strong>, yes. <code>pn preview</code> renders your app in a browser tab
 inside a phone frame, with Fast Refresh on every save. It's the fastest
 inner loop: see your real UI and iterate in seconds without booting a
 simulator or deploying to a device. The page speaks the same bridge
-protocol as the Swift and Kotlin runtimes, so the reconciler, layout
-engine, hooks, navigation, and screen host are the exact code that
-ships to the phone. See the
+protocol as the Swift and Kotlin runtimes. It shares Python components,
+hooks, reconciliation, and logical navigation with mobile apps; the page
+implements widgets in the DOM and layout with Yoga WebAssembly. See the
 <a href="../../guides/browser-preview/">Browser preview guide</a>.</p>
 <p>The browser preview is a <strong>development tool</strong>, not a production target:
 platform chrome and fonts are approximated, most device APIs are
 simulated, and there's no web or desktop packaging. Ship to devices
 with <code>pn run android</code> / <code>pn run ios</code> and <code>pn build</code>.</p>
 <p>The core (components, hooks, reconciler) is also platform-agnostic and
-runs headless with a <a href="../../guides/testing/#a-minimal-fake-backend">fake backend</a>;
+runs headless with a <a href="../../guides/testing/">fake backend</a>;
 that's how the unit-test suite works.</p>
 <h2 id="how-do-i-package-and-distribute-my-app">How do I package and distribute my app?<a class="headerlink" href="#how-do-i-package-and-distribute-my-app" title="Permanent link">&para;</a></h2>
 <p><code>pn run android</code> and <code>pn run ios</code> produce installable artifacts in
@@ -3691,35 +4011,45 @@ and the live compatibility matrix.</p>
 <p>Don't put <code>pythonnative</code> itself in <code>[requirements].packages</code>; the CLI
 bundles the installed copy directly.</p>
 <h2 id="where-do-flex-padding-and-position-absolute-actually-run">Where do <code>flex</code>, <code>padding</code>, and <code>position: "absolute"</code> actually run?<a class="headerlink" href="#where-do-flex-padding-and-position-absolute-actually-run" title="Permanent link">&para;</a></h2>
-<p>In Python. PythonNative ships its own pure-Python flexbox engine
-(<code>pythonnative.layout</code>) and runs it after every commit. The engine produces an absolute frame for every element, and
-the reconciler hands those frames to the platform handlers via
-<code>set_frame</code>. Containers on both platforms are simple
-<code>UIView</code> / <code>FrameLayout</code> instances; there's no <code>UIStackView</code> or
-<code>LinearLayout</code> in the picture, so there's no platform drift between
-the two backends. See <a href="../../concepts/layout/">Layout engine</a> for
-details.</p>
+<p>In the Yoga C++ engine compiled into each mobile runtime. Python sends
+styles through the bridge; native widgets supply intrinsic measurements,
+and the renderer returns changed frames to Python. The browser uses Yoga
+WebAssembly, while headless tests use the Python host binding in
+<code>pythonnative.layout</code>. The layout rules are shared, but platform fonts
+and controls can have different intrinsic sizes. See
+<a href="../../concepts/layout/">Layout engine</a>.</p>
 <h2 id="how-is-state-shared-across-screens">How is state shared across screens?<a class="headerlink" href="#how-is-state-shared-across-screens" title="Permanent link">&para;</a></h2>
-<p>Two main options:</p>
+<p>Every screen is part of one component tree, so the usual tools work
+across screens:</p>
 <ul>
+<li>A <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;Store&lt;/span&gt;" href="../../api/store/#pythonnative.store.Store"><code>pn.Store</code></a> for app-wide, long-lived state.
+  Define it at module level, change it with plain functions that call
+  <code>store.update(...)</code>, and read it with
+  <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;use_store&lt;/span&gt;" href="../../api/store/#pythonnative.store.use_store"><code>use_store</code></a>. A selector
+  (<code>pn.use_store(store, lambda s: s.unread)</code>) re-renders a component
+  only when the value it reads changes. It fills the role of Zustand
+  or Redux in a React Native app.</li>
 <li><a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;use_context&lt;/span&gt;" href="../../api/hooks/#pythonnative.hooks.use_context"><code>use_context</code></a> /
-  <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-method&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;Provider&lt;/span&gt;" href="../../api/hooks/#pythonnative.hooks.Context.Provider"><code>Context.Provider</code></a> for tree-scoped values
-  (themes, current user). The provider sits at the top of the
-  navigator and descendants subscribe.</li>
-<li>A plain Python module-level object (a "store") for app-wide,
-  long-lived state. Subscribe to changes via your own event bus and
-  call <code>set_state</code> on a hook to trigger re-renders.</li>
+  <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-method&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;Provider&lt;/span&gt;" href="../../api/hooks/#pythonnative.hooks.Context.Provider"><code>Context.Provider</code></a> for
+  tree-scoped values (the current user, a repository object). Place
+  the provider above the <code>NavigationContainer</code> so every screen can
+  read it.</li>
+<li>Screen params for the data a screen needs to show: pass an id as a
+  parameter (<code>nav.push(ItemScreen(id=42))</code>) and look the record up in
+  the screen.</li>
 </ul>
-<p>PythonNative doesn't ship a Redux-style store; the
-<a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;use_reducer&lt;/span&gt;" href="../../api/hooks/#pythonnative.hooks.use_reducer"><code>use_reducer</code></a> hook covers most cases
-without one.</p>
+<p>See <a href="../../guides/state/">Managing state</a> for when to use each, and for
+persisting state across launches.</p>
 <h2 id="how-do-i-navigate-between-screens">How do I navigate between screens?<a class="headerlink" href="#how-do-i-navigate-between-screens" title="Permanent link">&para;</a></h2>
-<p>Use <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;NavigationContainer&lt;/span&gt;" href="../../api/navigation/#pythonnative.navigation.container.NavigationContainer"><code>NavigationContainer</code></a> plus one
-of <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;create_stack_navigator&lt;/span&gt;" href="../../api/navigation/#pythonnative.navigation.navigators.create_stack_navigator"><code>create_stack_navigator</code></a>,
-<a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;create_tab_navigator&lt;/span&gt;" href="../../api/navigation/#pythonnative.navigation.navigators.create_tab_navigator"><code>create_tab_navigator</code></a>, or
-<a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;create_drawer_navigator&lt;/span&gt;" href="../../api/navigation/#pythonnative.navigation.navigators.create_drawer_navigator"><code>create_drawer_navigator</code></a>.
-From a screen, call <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;use_navigation&lt;/span&gt;" href="../../api/navigation/#pythonnative.navigation.hooks.use_navigation"><code>use_navigation</code></a>
-to get an imperative handle (<code>navigate</code>, <code>go_back</code>, etc.). See the
+<p>Define your screens as components, list them in a module-level
+<a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;StackNavigator&lt;/span&gt;" href="../../api/navigation/#pythonnative.navigation.navigators.StackNavigator"><code>StackNavigator</code></a>,
+<a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;TabNavigator&lt;/span&gt;" href="../../api/navigation/#pythonnative.navigation.navigators.TabNavigator"><code>TabNavigator</code></a>, or
+<a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;DrawerNavigator&lt;/span&gt;" href="../../api/navigation/#pythonnative.navigation.navigators.DrawerNavigator"><code>DrawerNavigator</code></a>, and render it with
+<a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;NavigationContainer&lt;/span&gt;" href="../../api/navigation/#pythonnative.navigation.container.NavigationContainer"><code>NavigationContainer</code></a>. From a
+screen, call <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;use_navigation&lt;/span&gt;" href="../../api/navigation/#pythonnative.navigation.hooks.use_navigation"><code>use_navigation</code></a> and pass
+the destination as a call to its component:
+<code>nav.push(ItemScreen(id=42))</code>. The screen's parameters are its route
+params, so the type checker verifies them. See the
 <a href="../../guides/navigation/">Navigation guide</a>.</p>
 <h2 id="why-hooks-instead-of-class-components">Why hooks instead of class components?<a class="headerlink" href="#why-hooks-instead-of-class-components" title="Permanent link">&para;</a></h2>
 <p>Hooks are smaller (no inheritance), composable (a custom hook is just
@@ -3737,16 +4067,17 @@ identity for the function so it can keep state across re-renders.</p>
 <li><strong>State-driven</strong> (e.g., a fade triggered by a button press): keep
   the value in <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;use_state&lt;/span&gt;" href="../../api/hooks/#pythonnative.hooks.use_state"><code>use_state</code></a> and let the
   reconciler push updates. Fine up to a few updates per second.</li>
-<li><strong>Frame-driven</strong> (e.g., a spring animation at 60Hz): hold a
-  reference to the native view via
-  <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;use_ref&lt;/span&gt;" href="../../api/hooks/#pythonnative.hooks.use_ref"><code>use_ref</code></a> and mutate it directly from a
-  display-link or <code>Choreographer</code> callback. Going through
-  <code>set_state</code> for every frame is wasteful.</li>
+<li><strong>Frame-driven</strong> (e.g., a spring animation): bind an
+  <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;AnimatedValue&lt;/span&gt;" href="../../api/animated/#pythonnative.animated.AnimatedValue"><code>AnimatedValue</code></a> into an
+  <code>Animated.View</code> style and drive it with <code>Animated.spring</code> or
+  <code>Animated.timing</code>. Native animation graphs update supported bindings
+  without running Python on every frame. See the
+  <a href="../../guides/animations/">Animations guide</a> for examples and fallback cases.</li>
 </ul>
 <h2 id="is-there-asyncawait-support">Is there async/await support?<a class="headerlink" href="#is-there-asyncawait-support" title="Permanent link">&para;</a></h2>
 <p>Yes, and it's the core of the framework. PythonNative runs a single
-<code>asyncio</code> event loop on the platform's main thread, pumped as a guest
-of the native run loop. Components themselves can be <code>async def</code> (pair
+standard <code>asyncio</code> loop on a dedicated application thread. Native UI threads
+own widgets, scrolling, and animation frames. Components themselves can be <code>async def</code> (pair
 them with <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;Suspense&lt;/span&gt;" href="../../api/components/#pythonnative.components.Suspense"><code>Suspense</code></a> for loading states),
 <code>use_effect</code> accepts coroutine callbacks and cancels them on unmount,
 <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;use_resource&lt;/span&gt;" href="../../api/hooks/#pythonnative.hooks.use_resource"><code>use_resource</code></a> fetches during render, and

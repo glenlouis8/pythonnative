@@ -887,10 +887,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-registry" class="md-nav__link">
+  <a href="#the-backend" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The registry
+        The backend
       
     </span>
   </a>
@@ -1004,6 +1004,14 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -1261,6 +1269,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../../guides/state/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Managing State
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/assets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assets, Fonts, Icons & SVG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../guides/animations/" class="md-nav__link">
         
   
@@ -1429,6 +1493,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../guides/native-contracts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Generated Native Contracts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../guides/pypi-packages/" class="md-nav__link">
         
   
@@ -1549,6 +1641,34 @@
     
   
     Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/linting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linting
   
 
     
@@ -2072,6 +2192,18 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2218,6 +2350,34 @@
     
   
     Hooks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/handles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Handles
   
 
     
@@ -2414,6 +2574,62 @@
     
   
     Images
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/assets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/graphics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Graphics
   
 
     
@@ -2658,6 +2874,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api/theme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Theme
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/store/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Store
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api/navigation/" class="md-nav__link">
         
   
@@ -2694,6 +2966,34 @@
     
   
     Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/lint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lint
   
 
     
@@ -3351,10 +3651,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-registry" class="md-nav__link">
+  <a href="#the-backend" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The registry
+        The backend
       
     </span>
   </a>
@@ -3453,19 +3753,20 @@
 <p>The reconciler doesn't know what a <code>Text</code> or a <code>Button</code> is. It produces
 a flat list of <strong>mutation ops</strong> (create, update, insert, remove,
 destroy, set-frame) that reference views by integer <strong>tag</strong>, and hands
-the whole list to the
-<a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;NativeViewRegistry&lt;/span&gt;" href="../../api/native_views/#pythonnative.native_views.NativeViewRegistry"><code>NativeViewRegistry</code></a> in
-a single
-<a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-method&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;apply_mutations&lt;/span&gt;" href="../../api/native_views/#pythonnative.native_views.NativeViewRegistry.apply_mutations"><code>apply_mutations</code></a>
-call per commit.</p>
-<p>On a device that registry is the
+the whole list to the process-wide <strong>view backend</strong> (from
+<a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;get_backend&lt;/span&gt;" href="../../api/native_views/#pythonnative.native_views.get_backend"><code>get_backend</code></a>) in a single
+<code>apply_mutations</code> call per commit.</p>
+<p>On a device that backend is the
 <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;BridgeBackend&lt;/span&gt;" href="../../api/native_views/#pythonnative.native_views.bridge_backend.BridgeBackend"><code>BridgeBackend</code></a>:
-it serializes the batch and sends it across the
-<a href="../bridge/">native bridge</a> in one call, where a Swift or Kotlin
-<strong>component manager</strong> per element type creates and updates the real
-views. The browser preview is the same path with a WebSocket
-transport: the page applies the transactions with DOM elements. In
-tests the registry dispatches to an in-memory fake.</p>
+it builds the wire transaction once, validates it once, serializes it
+once, and sends it across the <a href="../bridge/">native bridge</a> in one call,
+where a Swift or Kotlin <strong>component manager</strong> per element type creates
+and updates the real views. The browser preview is the same path with a
+WebSocket transport: the page applies the transactions with DOM
+elements. In tests an in-memory
+<a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;FakeBackend&lt;/span&gt;" href="../../api/testing/#pythonnative.testing.FakeBackend"><code>FakeBackend</code></a> implements the same
+protocol. Python never holds a native view object and never runs a
+Python "view handler"; production and tests both talk to a backend.</p>
 <p>This page describes that boundary, walks through what a component
 manager does, and covers the fake backend used by <code>pytest</code>.</p>
 <h2 id="the-commit-protocol">The commit protocol<a class="headerlink" href="#the-commit-protocol" title="Permanent link">&para;</a></h2>
@@ -3486,7 +3787,7 @@ the render loop.</p>
 </tr>
 <tr>
 <td><code>UpdateOp(tag, changed_props)</code></td>
-<td>Apply only the props that changed (removed props arrive as <code>None</code>).</td>
+<td>Apply only the props that changed (<code>UNSET</code> removes a prop; <code>None</code> is explicit null).</td>
 </tr>
 <tr>
 <td><code>InsertOp(parent_tag, child_tag, index)</code></td>
@@ -3498,7 +3799,7 @@ the render loop.</p>
 </tr>
 <tr>
 <td><code>SetFrameOp(tag, x, y, w, h)</code></td>
-<td>Apply a layout frame. Only emitted for frames that actually changed.</td>
+<td>Apply a frame from headless layout or an explicit frame operation. Bridge renderers compute ordinary layout beside their widgets.</td>
 </tr>
 </tbody>
 </table>
@@ -3507,7 +3808,7 @@ view exists, so ops can't reference views directly. Tags also give the
 native side a stable identity for event routing and animation
 bookkeeping, and the flat op list is what makes a single crossing per
 commit possible. On the wire each op is a short JSON array
-(<code>["c", tag, "Text", {...}]</code>); see <a href="../bridge/#transactions">Transactions</a>.</p>
+(<code>["c", tag, "Text", {...}]</code>); see <a href="../bridge/#commits">Transactions</a>.</p>
 <h2 id="component-managers">Component managers<a class="headerlink" href="#component-managers" title="Permanent link">&para;</a></h2>
 <p>On device every element type is implemented by a Swift
 <code>PNComponentManager</code> (in <code>PythonNativeKit</code>) and a Kotlin
@@ -3544,11 +3845,11 @@ view. The hooks mirror the op list:</p>
 </tr>
 <tr>
 <td><code>setFrame(view, x, y, w, h)</code></td>
-<td>On <code>f</code>. Frames are points (iOS) or dp (Android).</td>
+<td>After the native Yoga pass, with the computed frame. Frames are points (iOS) or dp (Android).</td>
 </tr>
 <tr>
 <td><code>measure(view, maxW, maxH)</code></td>
-<td>Synchronously, when the layout engine needs a content-derived size.</td>
+<td>On the UI thread, when Yoga needs a content-derived size.</td>
 </tr>
 <tr>
 <td><code>command(view, name, args)</code></td>
@@ -3560,9 +3861,8 @@ view. The hooks mirror the op list:</p>
 </tr>
 </tbody>
 </table>
-<p>Managers do <strong>not</strong> read flex, margin, or padding props; those are
-interpreted by <code>pythonnative.layout</code> and turned into <code>f</code> ops. A
-manager only applies the frame it is given.</p>
+<p>Yoga interprets flex, margin, and padding props in the native renderer.
+Managers provide intrinsic measurements and apply computed frames.</p>
 <p>Managers fire events by tag through <code>PNEvents.emit(view, "on_change",
 [value])</code> (Swift) or <code>PNEvents.fire(view, "on_change", value)</code>
 (Kotlin). The bridge routes them to
@@ -3578,38 +3878,48 @@ of event names present) so managers can wire expensive listeners
 lambda is a fresh object) costs <strong>zero</strong> native calls. The registry
 swaps the Python-side callback and the already-wired native listener
 picks it up on the next dispatch.</p>
-<h2 id="the-registry">The registry<a class="headerlink" href="#the-registry" title="Permanent link">&para;</a></h2>
-<p>The <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;NativeViewRegistry&lt;/span&gt;" href="../../api/native_views/#pythonnative.native_views.NativeViewRegistry"><code>NativeViewRegistry</code></a>
-protocol is what the reconciler talks to. The implementation is chosen
-lazily by <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;get_registry&lt;/span&gt;" href="../../api/native_views/#pythonnative.native_views.get_registry"><code>get_registry</code></a>:</p>
+<h2 id="the-backend">The backend<a class="headerlink" href="#the-backend" title="Permanent link">&para;</a></h2>
+<p>The backend protocol is what the reconciler talks to: <code>apply_mutations</code>,
+<code>resolve_view</code>, <code>measure_intrinsic</code>, <code>command</code>, and the animation hooks
+(<code>set_animated_property</code>, <code>start_animation</code>, <code>cancel_animation</code>). The
+implementation is chosen lazily by
+<a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;get_backend&lt;/span&gt;" href="../../api/native_views/#pythonnative.native_views.get_backend"><code>get_backend</code></a>:</p>
 <ul>
 <li>On iOS and Android, a
   <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;BridgeBackend&lt;/span&gt;" href="../../api/native_views/#pythonnative.native_views.bridge_backend.BridgeBackend"><code>BridgeBackend</code></a>
   forwards every transaction, measurement, command, and animation
-  request to native.</li>
+  request to native. Before its first commit it imports the
+  <code>pythonnative.handlers</code> entry points so plugin component schemas are
+  registered.</li>
 <li>In the browser preview (<code>pn preview</code>, with <code>PN_PLATFORM=web</code>), the
   same <code>BridgeBackend</code> commits through a
   <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;WebTransport&lt;/span&gt;" href="../../api/devserver/#pythonnative.bridge.web.WebTransport"><code>WebTransport</code></a> to the page,
   which applies them with DOM elements. See the
   <a href="../../guides/browser-preview/">Browser preview guide</a>.</li>
-<li>Under <code>pytest</code>, the backend is replaced with a fake via
-  <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;set_registry&lt;/span&gt;" href="../../api/native_views/#pythonnative.native_views.set_registry"><code>set_registry</code></a> (or by
-  constructing the <code>Reconciler</code> with the fake directly).</li>
+<li>Under <code>pytest</code>, a <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;FakeBackend&lt;/span&gt;" href="../../api/testing/#pythonnative.testing.FakeBackend"><code>FakeBackend</code></a> is
+  installed with <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;set_backend&lt;/span&gt;" href="../../api/native_views/#pythonnative.native_views.set_backend"><code>set_backend</code></a>
+  (the shipped pytest plugin and
+  <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;render&lt;/span&gt;" href="../../api/testing/#pythonnative.testing.render"><code>render</code></a> do this for you), or passed to
+  the <code>Reconciler</code> directly.</li>
+<li>Anywhere else, with no backend installed, <code>get_backend</code> raises
+  instead of guessing.</li>
 </ul>
-<p>Per-op failures are isolated on both sides: a bad prop on one view
-logs a tripwire (Python) or a rate-limited native log instead of
-desyncing the whole transaction.</p>
+<p>Imperative access to a mounted view goes through the typed
+<a href="../../api/handles/">handle</a> the reconciler publishes on <code>ref.current</code>;
+<code>ViewHandle.command</code> forwards to the backend's <code>command</code>.</p>
+<p>The renderer validates an entire commit before applying it. A rejected
+commit fails the surface, and further incremental updates require a reset
+and remount. See <a href="../bridge/#commits">Commits</a> for the failure contract.</p>
 <h2 id="layout-and-styling">Layout and styling<a class="headerlink" href="#layout-and-styling" title="Permanent link">&para;</a></h2>
-<p>Layout-related style keys are interpreted by the central
-<code>pythonnative.layout</code> engine, <em>not</em> by the platform managers. The full
-list (sizing, flex, position, margin, padding, spacing, ...) is
+<p>Layout-related style keys are interpreted by the renderer's Yoga engine. The full
+list (sizing, flex, position, margin, padding, gap, ...) is
 documented in <a href="../../api/component-properties/">Component properties</a>.
 The set of keys the layout engine consumes is exposed as
 <code>pythonnative.layout.LAYOUT_STYLE_KEYS</code>.</p>
 <p>Managers only deal with <strong>visual</strong> properties: colors, fonts, borders,
-corner radii, image scaling, text content. After each commit the
-reconciler runs the layout pass and emits <code>SetFrameOp</code>s for every node
-whose frame changed.</p>
+corner radii, image scaling, and text content. After each commit the
+renderer computes layout and returns changed frames to Python.
+Headless backends use <code>pythonnative.layout</code> and <code>SetFrameOp</code> instead.</p>
 <p>On each platform that boils down to:</p>
 <ul>
 <li><strong>iOS</strong>: every container is a <code>PNContainerView</code> (a plain <code>UIView</code>)
@@ -3623,8 +3933,8 @@ whose frame changed.</p>
   with <code>View.measure(...)</code> and <code>MeasureSpec</code>. Shared visual props are
   applied by <code>ViewStyler</code>.</li>
 </ul>
-<p>Because layout is centralized, the same <code>style</code> dict produces the same
-geometry on Android and iOS.</p>
+<p>Yoga provides shared layout rules. Native font metrics and control sizes
+can produce different intrinsic measurements on Android and iOS.</p>
 <h2 id="children">Children<a class="headerlink" href="#children" title="Permanent link">&para;</a></h2>
 <p>Children of a container element become subviews of the corresponding
 native view. The reconciler determines insertion order (and reorders
@@ -3644,39 +3954,40 @@ tree of <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-sy
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">get_by_text</span><span class="p">(</span><span class="s2">"Hello"</span><span class="p">)</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">backend</span><span class="o">.</span><span class="n">ops_of</span><span class="p">(</span><span class="s2">"create"</span><span class="p">)</span>  <span class="c1"># every applied op is recorded</span>
 </span></code></pre></div>
-<p>Unlike the production backend, the fake <strong>raises</strong> on malformed
-transactions (unknown tags, double-destroys), so reconciler bugs fail
-tests loudly instead of being swallowed. See the
+<p>The fake raises on malformed transactions, including unknown tags and
+double destroys, so tests expose invalid mutation sequences. Custom
+components defined with <code>define_component</code> render into the fake like
+any element; there is no separate Python stand-in to write. See the
 <a href="../../guides/testing/">Testing guide</a>.</p>
 <p>The bridge itself is tested with
 <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;FakeTransport&lt;/span&gt;" href="../../api/bridge/#pythonnative.bridge.fake.FakeTransport"><code>FakeTransport</code></a>, which
 decodes the JSON transactions the <code>BridgeBackend</code> produces and keeps a
 view tree the way native would. Native decoders and managers have
-their own XCTest and JUnit suites inside the templates.</p>
+their own XCTest and JUnit suites inside the native libraries.</p>
 <h2 id="custom-widgets">Custom widgets<a class="headerlink" href="#custom-widgets" title="Permanent link">&para;</a></h2>
 <p>Adding a widget means a Swift manager, a Kotlin manager, and a Python
-registration; the <a href="../../api/sdk/"><code>pythonnative.sdk</code></a> module gives you
-a type-checked entry point for the Python half:</p>
+definition; the <a href="../../api/sdk/"><code>pythonnative.sdk</code></a> module gives you a
+type-checked entry point for the Python half:</p>
 <ol>
 <li>Define a frozen <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;Props&lt;/span&gt;
 
 
   &lt;span class=&quot;doc doc-labels&quot;&gt;
       &lt;small class=&quot;doc doc-label doc-label-dataclass&quot;&gt;&lt;code&gt;dataclass&lt;/code&gt;&lt;/small&gt;
-  &lt;/span&gt;" href="../../api/sdk/#pythonnative.sdk.Props"><code>Props</code></a>
-   dataclass listing the widget's API surface.</li>
+  &lt;/span&gt;" href="../../api/sdk/#pythonnative.sdk.Props"><code>Props</code></a> dataclass listing
+   the widget's API surface.</li>
 <li>Implement <code>PNComponentManager</code> / <code>ComponentManager</code> subclasses and
    register them under the element name from a <code>PNPlugin</code> entry.</li>
-<li>Call <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;register_component&lt;/span&gt;" href="../../api/sdk/#pythonnative.sdk.register_component"><code>register_component</code></a>
-   (or decorate a desktop
-   <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;ViewHandler&lt;/span&gt;" href="../../api/native_views/#pythonnative.native_views.base.ViewHandler"><code>ViewHandler</code></a> with
-   <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;native_component&lt;/span&gt;" href="../../api/sdk/#pythonnative.sdk.native_component"><code>@native_component</code></a>)
-   and hand callers an
-   <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;element_factory&lt;/span&gt;" href="../../api/sdk/#pythonnative.sdk.element_factory"><code>element_factory</code></a>.</li>
+<li>Call <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;define_component&lt;/span&gt;" href="../../api/sdk/#pythonnative.sdk.define_component"><code>define_component(name, props)</code></a>,
+   which registers the props schema for the contract generator and the
+   commit validator and returns the typed element factory.</li>
 </ol>
-<p>After registration the reconciler treats the new element like any
-other. <code>pn build</code> compiles the plugin's native sources into the app and
-PyPI packages register automatically through entry points. See the
+<p>After that the reconciler treats the new element like any other: it is
+validated, laid out, committed, and refreshed exactly like a built-in.
+Headless tests render it into the <code>FakeBackend</code>, and the browser
+preview draws it as a labeled placeholder. <code>pn build</code> compiles the
+plugin's native sources into the app and PyPI packages define their
+components automatically through entry points. See the
 <a href="../../guides/custom-native-components/">Custom native components guide</a>
 for the full walkthrough.</p>
 <h2 id="next-steps">Next steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>

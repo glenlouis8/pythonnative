@@ -1017,6 +1017,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1239,6 +1247,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../../guides/state/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Managing State
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/assets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assets, Fonts, Icons & SVG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../guides/animations/" class="md-nav__link">
         
   
@@ -1407,6 +1471,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../guides/native-contracts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Generated Native Contracts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../guides/pypi-packages/" class="md-nav__link">
         
   
@@ -1527,6 +1619,34 @@
     
   
     Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/linting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linting
   
 
     
@@ -2050,6 +2170,18 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2196,6 +2328,34 @@
     
   
     Hooks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/handles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Handles
   
 
     
@@ -2392,6 +2552,62 @@
     
   
     Images
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/assets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/graphics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Graphics
   
 
     
@@ -2636,6 +2852,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api/theme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Theme
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/store/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Store
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api/navigation/" class="md-nav__link">
         
   
@@ -2672,6 +2944,34 @@
     
   
     Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/lint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lint
   
 
     
@@ -3421,9 +3721,13 @@ fold into it, and where you can hook in.</p>
 </ul>
 <p>A <code>use_state</code> / <code>use_reducer</code> setter re-renders <strong>locally</strong>: only the
 component that owns the changed state (and the subtree it returns) is
-re-run, not the whole app. The full tree is rebuilt from the root only
-on initial mount, navigation, and hot reload. Sibling and ancestor
-components keep their existing native views and hook state untouched.</p>
+re-run. Setters never render inline: every setter call made during one
+callback, effect, or task step lands in the same flush, scheduled on the
+application loop (automatic batching), on every host including headless
+tests. Sibling and ancestor components retain their native views and hook
+state unless their own inputs or context change. Screens and mounted list
+rows belong to the same logical tree. Navigation updates that tree, and
+Fast Refresh preserves compatible component instances.</p>
 <p>The phases:</p>
 <ol>
 <li><strong>Render</strong>. The affected <code>@component</code> function(s) run (for a state
@@ -3432,21 +3736,27 @@ components keep their existing native views and hook state untouched.</p>
    so this phase is cheap and pure (modulo <code>use_state</code> updates).</li>
 <li><strong>Commit</strong>. The
    <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;Reconciler&lt;/span&gt;" href="../../api/reconciler/#pythonnative.reconciler.core.Reconciler"><code>Reconciler</code></a> diffs the
-   re-rendered subtree against the previous one, applies the smallest
-   set of native mutations through the registered
-   <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;ViewHandler&lt;/span&gt;" href="../../api/native_views/#pythonnative.native_views.base.ViewHandler"><code>ViewHandler</code></a>s, and
-   runs the layout pass.</li>
+   re-rendered subtree against the previous one, hands the smallest
+   set of native mutations to the view backend in one
+   <code>apply_mutations</code> call (the Swift and Kotlin component managers
+   apply them; see <a href="../native-views/">Native views</a>), and runs the
+   layout pass.</li>
 <li><strong>Layout effects</strong>.
    <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;use_layout_effect&lt;/span&gt;" href="../../api/hooks/#pythonnative.hooks.use_layout_effect"><code>use_layout_effect</code></a> callbacks run
-   synchronously inside the commit, after frames are set, so they can
-   measure committed geometry or issue view commands before the frame
-   is presented.</li>
+   on the application thread after committed geometry is available,
+   before passive effects. They can inspect frames or issue view commands;
+   the platform UI thread owns presentation.</li>
 <li><strong>Passive effects</strong>. Cleanup callbacks from the <em>previous</em> render
    run first; new <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;use_effect&lt;/span&gt;" href="../../api/hooks/#pythonnative.hooks.use_effect"><code>use_effect</code></a> callbacks
-   run after, in depth-first order so children run before parents.</li>
+   run after, in depth-first order so children run before parents. An
+   exception raised by a layout or passive effect is routed to the
+   nearest <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-function&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;ErrorBoundary&lt;/span&gt;" href="../../api/components/#pythonnative.components.ErrorBoundary"><code>ErrorBoundary</code></a> exactly like a
+   render error; it never fails the native surface.</li>
 <li><strong>Drain</strong>. If any effect set state, another render pass is queued
-   immediately. The screen host caps the loop to prevent runaway
-   re-renders.</li>
+   immediately. A flush that keeps re-scheduling itself more than
+   fifty times raises <code>RuntimeError("Too many re-renders")</code> from the
+   component that keeps dirtying itself, routed through the nearest
+   <code>ErrorBoundary</code> (or the RedBox in dev mode).</li>
 </ol>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[render] -&gt; [commit + layout] -&gt; [layout effects] -&gt; [passive effects] -&gt; drain? -&gt; [render] ...
 </span></code></pre></div>
@@ -3496,7 +3806,7 @@ component unmounts; no manual task bookkeeping is needed. See the
 </tr>
 <tr>
 <td><code>getSnapshotBeforeUpdate</code></td>
-<td><code>use_layout_effect</code> (runs inside the commit, before paint-visible effects)</td>
+<td><code>use_layout_effect</code> (inspect committed geometry before passive effects)</td>
 </tr>
 </tbody>
 </table>
@@ -3521,8 +3831,12 @@ component unmounts; no manual task bookkeeping is needed. See the
 and effects:</p>
 <ul>
 <li><strong>Resume / <code>viewWillAppear</code></strong>: the active screen's <code>use_focus_effect</code>
-  is re-armed.</li>
+  is re-armed, and the event carries fresh viewport metrics.</li>
 <li><strong>Pause / <code>viewWillDisappear</code></strong>: focus cleanups run.</li>
+<li><strong>Save / restore instance state</strong>: acknowledged without calling into
+  Python. The host caches navigation restoration state as Python
+  publishes it, so platform state-saving never waits on the
+  application thread.</li>
 <li><strong>Destroy / <code>dealloc</code></strong>: every effect cleanup runs and the
   reconciler tears down its native tree.</li>
 </ul>
@@ -3535,7 +3849,7 @@ hook instead.</p>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pythonnative</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pn</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nd">@pn</span><span class="o">.</span><span class="n">component</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">def</span><span class="w"> </span><span class="nf">LiveClock</span><span class="p">():</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">def</span><span class="w"> </span><span class="nf">LiveClock</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">pn</span><span class="o">.</span><span class="n">Node</span><span class="p">:</span>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="n">now</span><span class="p">,</span> <span class="n">set_now</span> <span class="o">=</span> <span class="n">pn</span><span class="o">.</span><span class="n">use_state</span><span class="p">(</span><span class="s2">"--:--"</span><span class="p">)</span>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">tick</span><span class="p">():</span>
