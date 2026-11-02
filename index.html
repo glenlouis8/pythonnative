@@ -1009,6 +1009,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1127,6 +1131,62 @@
     
   
     Development Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guides/devtools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PythonNative Go & DevTools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guides/debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debugging
   
 
     
@@ -2780,34 +2840,6 @@
   
   
     <li class="md-nav__item">
-      <a href="api/layout/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Layout
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="api/style/" class="md-nav__link">
         
   
@@ -3180,6 +3212,34 @@
     
   
     Dev server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/devtools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DevTools agent
   
 
     
@@ -3699,8 +3759,8 @@ with one transaction per commit. Application components run in Python.</p>
 </span></code></pre></div>
 <p>That same <code>Counter</code> mounts as a <code>UILabel</code> plus a <code>UIButton</code> inside a
 <code>UIView</code> on iOS, and as a <code>TextView</code> plus a <code>Button</code> inside a
-<code>FrameLayout</code> on Android. The shared Yoga layout engine interprets
-<code>flex</code>, <code>padding</code>, and <code>position</code> beside the native widgets.
+<code>FrameLayout</code> on Android. A shared C++ renderer core interprets
+<code>flex</code>, <code>padding</code>, and <code>position</code> with Yoga, off the UI thread.
 Platform controls and fonts supply their own intrinsic sizes.</p>
 <h2 id="why-pythonnative">Why PythonNative?<a class="headerlink" href="#why-pythonnative" title="Permanent link">&para;</a></h2>
 <ul>
@@ -3743,13 +3803,20 @@ Platform controls and fonts supply their own intrinsic sizes.</p>
   names; and a <a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;Store&lt;/span&gt;" href="api/store/#pythonnative.store.Store"><code>Store</code></a> holds app state with
   targeted re-renders. See <a href="guides/styling/">Styling</a> and
   <a href="guides/state/">Managing state</a>.</li>
-<li><strong>A Metro-style dev loop.</strong> <code>pn start</code> runs one dev server for the
-  browser preview and every connected debug build. Save a file and
-  each client Fast Refreshes in place, preserving component state;
-  their logs stream back into the same terminal. See the
-  <a href="guides/dev-workflow/">Development workflow</a>.</li>
-<li><strong>Dev-mode diagnostics.</strong> Uncaught errors show a full-screen RedBox
-  with the traceback instead of crashing; typos in style keys and
+<li><strong>A Metro-style dev loop with PythonNative Go.</strong> <code>pn start</code> runs one
+  dev server for the browser preview and every connected app, and prints
+  a QR code. PythonNative Go, a prebuilt dev client, runs any project
+  without native code on a simulator, emulator, or phone without
+  compiling the project. Save a file and each client Fast Refreshes in place, preserving
+  component state. See the <a href="guides/dev-workflow/">Development workflow</a>
+  and <a href="guides/devtools/">PythonNative Go and DevTools</a>.</li>
+<li><strong>DevTools and breakpoints.</strong> A DevTools page shows the component tree
+  with props and hooks, a REPL inside the running app, problems,
+  network requests, and performance. VS Code attaches <code>debugpy</code>
+  breakpoints to the Python running on a phone. See
+  <a href="guides/debugging/">Debugging</a>.</li>
+<li><strong>Dev-mode diagnostics.</strong> Uncaught errors show a full-screen error
+  screen with the component stack and your source instead of crashing; typos in style keys and
   duplicate list keys print "did you mean" warnings; props that don't
   match a component's annotations warn; conditional hooks raise at the
   source. Every check is skipped in production, and

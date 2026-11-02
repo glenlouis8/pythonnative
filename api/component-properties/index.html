@@ -898,6 +898,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1016,6 +1020,62 @@
     
   
     Development Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/devtools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PythonNative Go & DevTools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debugging
   
 
     
@@ -2672,34 +2732,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../layout/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Layout
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../style/" class="md-nav__link">
         
   
@@ -3072,6 +3104,34 @@
     
   
     Dev server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devtools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DevTools agent
   
 
     
@@ -4313,9 +4373,10 @@
 
 <h1 id="component-property-reference">Component property reference<a class="headerlink" href="#component-property-reference" title="Permanent link">&para;</a></h1>
 <p>All visual and layout properties are passed via the <code>style</code> dict (or list of dicts) to element functions. Behavioural properties (callbacks, data, content) remain as keyword arguments.</p>
-<p>Layout properties are interpreted by Yoga beside the native widgets, with
+<p>Layout properties are interpreted by Yoga in the renderer core, with
 platform measurements for text and controls. Visual properties are applied by
-component managers. The browser preview uses Yoga WebAssembly and DOM widgets.
+component managers. The browser preview runs the same core as WebAssembly and
+mounts DOM widgets.
 See <a href="../../concepts/layout/">Layout engine</a> for the shared rules and platform
 differences.</p>
 <h2 id="common-layout-properties-inside-style">Common layout properties (inside <code>style</code>)<a class="headerlink" href="#common-layout-properties-inside-style" title="Permanent link">&para;</a></h2>
